@@ -1,0 +1,1253 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#"
+     xml:base="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:msm="http://iserve.kmi.open.ac.uk/ns/msm#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:san="https://www.irit.fr/recherches/MELODI/ontologies/SAN#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:owlx="http://www.w3.org/2003/05/owl-xml"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrlx="http://www.w3.org/2003/11/swrlx#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:DEMISA="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#"
+     xmlns:hrests="http://www.wsmo.org/ns/hrests#"
+     xmlns:ruleml="http://www.w3.org/2003/11/ruleml"
+     xmlns:schema="http://www.ontologydesignpatterns.org/schemas/cpannotation/schema.owl#"
+     xmlns:avataront="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#"
+     xmlns:wsmo-lite="http://www.wsmo.org/ns/wsmo-lite#">
+    <owl:Ontology rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt">
+        <owl:versionIRI rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt/0.0.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#hasOperation -->
+
+    <owl:ObjectProperty rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOperation">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRestriction -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRestriction">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuator"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingRestriction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasSensorOutput -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSensorOutput">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingRestriction"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#deployedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#deployedIn">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasChildTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasChildTask">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#GroupedTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasGoal">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasLocation">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+        <rdfs:range rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Location"/>
+    </owl:ObjectProperty>
+
+
+     <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInterest -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInterest">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+        <rdfs:range rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Interest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasMobility -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasMobility">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasPerformance -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasPerformance">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#QoS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasQoS -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasQoS">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <rdfs:range rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#QoS"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasService -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasService">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+        <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#represents -->
+
+    <owl:ObjectProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#represents">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasGrouping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasGrouping">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#GroupedTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Grouping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasInputTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasInputTask">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasNext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasNext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasOutputTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasOutputTask">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasPostcondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasPostcondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Postcondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasPrecondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasPrecondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Precondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasState">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wsmo.org/ns/hrests#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.wsmo.org/ns/hrests#hasAddress">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:range rdf:resource="http://www.wsmo.org/ns/hrests#URITemplate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wsmo.org/ns/hrests#hasMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.wsmo.org/ns/hrests#hasMethod">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wsmo.org/ns/wsmo-lite#hasInputMessage -->
+
+    <owl:ObjectProperty rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasInputMessage">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wsmo.org/ns/wsmo-lite#hasOutputMessage -->
+
+    <owl:ObjectProperty rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasOutputMessage">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuatingCapability -->
+
+    <owl:ObjectProperty rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuatingCapability">
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuator"/>
+        <rdfs:range rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuatingProperty -->
+
+    <owl:ObjectProperty rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuatingProperty">
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingCapability"/>
+        <rdfs:range rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuation -->
+
+    <owl:ObjectProperty rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuation">
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuator"/>
+        <rdfs:range rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuationInput -->
+
+    <owl:ObjectProperty rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuationInput">
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuation"/>
+        <rdfs:range rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuationInput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasObservationValue -->
+
+    <owl:ObjectProperty rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasObservationValue">
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasBatteryLife -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasBatteryLife">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasFreeRAM -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasFreeRAM">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasResolution -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasResolution">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasResponseTime -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasResponseTime">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#deployedIn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#deployedIn">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasAddress">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasAvailability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasAvailability">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasExecTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasExecTime">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInput -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInput">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasLabel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInputMessage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInputMessage">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasLocation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasMethod">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasMobility -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasMobility">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasOutput -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasOutput">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasOutputMessage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasOutputMessage">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasPostcondition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasPostcondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasPrecondition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasPrecondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasState -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasState">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+   
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasTotalCalls -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasTotalCalls">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuatingTime -->
+
+    <owl:DatatypeProperty rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuatingTime">
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuationValue -->
+
+    <owl:DatatypeProperty rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuationValue">
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuationInput"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasObservationValue -->
+
+    <owl:DatatypeProperty rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasObservationValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasLabel -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#hasLabel">
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInterest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInterest">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasOwner -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasOwner">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasLocation">
+        <rdfs:domain rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInterest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasInterest">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#MessageContent -->
+
+    <owl:Class rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#Operation -->
+
+    <owl:Class rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#Service -->
+
+    <owl:Class rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Service">
+        <owl:disjointWith rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Device -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"/>
+                <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingRestriction"/>
+        <owl:disjointWith rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty">
+        <owl:disjointWith rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"/>
+        <owl:disjointWith rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Observation -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#OperatingRestriction -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#OperatingRestriction">
+        <owl:disjointWith rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#SensorOutput -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty">
+        <owl:disjointWith rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Availability -->
+
+    <owl:Class rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Availability">
+        <rdfs:subClassOf rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar -->
+
+    <owl:Class rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#ExecutionTime -->
+
+    <owl:Class rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#ExecutionTime">
+        <rdfs:subClassOf rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Location -->
+
+    <owl:Class rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Location"/>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Interest -->
+
+    <owl:Class rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Interest"/>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance -->
+
+    <owl:Class rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#QoS -->
+
+    <owl:Class rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#QoS"/>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#TotalCalls -->
+
+    <owl:Class rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#TotalCalls">
+        <rdfs:subClassOf rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#AtomicTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#AtomicTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#GroupedTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#GroupedTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Grouping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Grouping">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Choice"/>
+                    <rdf:Description rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Parallel"/>
+                    <rdf:Description rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Sequence"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Input -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Input"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Output -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Output"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Postcondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Postcondition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Precondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Precondition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#State"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#Task"/>
+    
+
+
+    <!-- http://www.wsmo.org/ns/hrests#URITemplate -->
+
+    <owl:Class rdf:about="http://www.wsmo.org/ns/hrests#URITemplate"/>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingCapability -->
+
+    <owl:Class rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingCapability">
+        <owl:disjointWith rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingProperty -->
+
+    <owl:Class rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatingProperty"/>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuation -->
+
+    <owl:Class rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuation"/>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuationInput -->
+
+    <owl:Class rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuationInput"/>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuator -->
+
+    <owl:Class rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuator">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/SAN#MeasurementCapability -->
+
+    <owl:Class rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/SAN#MeasurementCapability"/>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#realizes 
+
+    <owl:ObjectProperty rdf:about="&avataront;realizes">
+        <rdfs:domain rdf:resource="&avataront;Avatar"/>
+        <rdfs:range rdf:resource="&DEMISA;Task"/>
+    </owl:ObjectProperty>
+    -->
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!--  ///////////////////////////////////////////////////////////////////////////////////////
+                    A V A T A R 
+         ///////////////////////////////////////////////////////////////////////////////////////-->
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar3">
+        <rdf:type rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Avatar"/>
+        <hasGoal rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Goal3"/>
+        <hasService rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service13"/>
+        <hasService rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121"/>
+        <hasService rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14"/>
+        <hasService rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15"/>
+        <hasInterest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InterestA/0.7</hasInterest>
+        <hasInterest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InterestN/0.6</hasInterest>
+        <hasInterest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InterestB/0.5</hasInterest>
+        <hasInterest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InterestM/0.1</hasInterest>
+        <hasOwner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OwnerA</hasOwner>
+        <hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43.605829/1.448601</hasLocation>
+        <represents rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Left_blinking"/>
+        <deployedIn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://192.168.0.2:8080/~/MN-BBB/ETH_GW</deployedIn>
+        <hasMobility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasMobility>
+    </owl:NamedIndividual>
+
+
+    
+    <!--  ///////////////////////////////////////////////////////////////////////////////////////
+					T A S K S 
+    	 ///////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Goal3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Goal3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#GroupedTask"/>
+        <hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LabelG3</hasLabel>
+        <hasChildTask rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Task13"/>
+        <hasChildTask rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Task19"/>
+        <hasChildTask rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Task5"/>
+        <DEMISA:hasGrouping rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Parallel"/>
+    </owl:NamedIndividual>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Task13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Task13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#AtomicTask"/>
+        <hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Label13</hasLabel>
+        <hasInterest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InterestB</hasInterest>
+        <hasInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</hasInput>
+        <hasOutput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</hasOutput>
+        <hasPrecondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TimeExec&lt;2</hasPrecondition>
+    </owl:NamedIndividual>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Task19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Task19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#AtomicTask"/>
+        <hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Label19</hasLabel>
+        <hasInterest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InterestM</hasInterest>
+        <hasInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</hasInput>
+        <hasOutput rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasOutput>
+        <hasPrecondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TimeExec&lt;0.2</hasPrecondition>
+    </owl:NamedIndividual>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Task5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Task5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kkhadir/ontologies/2019/1/DEMISA#AtomicTask"/>
+        <hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Label5</hasLabel>
+        <hasInterest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InterestF</hasInterest>
+        <hasInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</hasInput>
+        <hasOutput rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasOutput>
+        <hasPrecondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TimeExec&lt;0.4</hasPrecondition>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Left_blinking -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Left_blinking">
+        <rdf:type rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuator"/>
+        <san:hasActuation rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Left_blinking_State"/>
+    </owl:NamedIndividual>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Choice -->
+
+    <owl:Thing rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Choice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+
+
+
+        <!--  ///////////////////////////////////////////////////////////////////////////////////////
+                    S E R V I C E S
+         ///////////////////////////////////////////////////////////////////////////////////////-->
+
+
+                  <!-- SERVICE 13 -->
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service13">
+        <rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <msm:hasOperation rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service13_operation"/>
+        <hasQoS rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_QoS"/>
+        <hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Label13</hasLabel>
+    </owl:NamedIndividual>
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service13_operation -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service13_operation">
+        <rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <hasAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://192.168.0.2:8080/~/MN-BBB/ETH_GW/Avatar3?op=Service13_operation</hasAddress>
+        <hasMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GET</hasMethod>
+        <hasOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OutputOFService13</hasOutputMessage>
+    </owl:NamedIndividual>
+    
+
+                <!-- SERVICE 121 -->
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121 -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121">
+        <rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <hasQoS rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_QoS"/>
+        <msm:hasOperation rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_operation"/>
+        <hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Label121</hasLabel>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_operation -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_operation">
+        <rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <hasAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://192.168.0.2:8080/~/MN-BBB/ETH_GW/Avatar3?op=Service121_operation</hasAddress>
+        <hasMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GET</hasMethod>
+        <hasOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OutputOFService121</hasOutputMessage>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_QoS -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_QoS">
+        <rdf:type rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#QoS"/>
+        <hasPerformance rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_performance"/>
+    </owl:NamedIndividual>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_performance -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service121_performance">
+        <rdf:type rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+        <hasAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasAvailability>
+        <hasExecTime rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1</hasExecTime>
+        <hasTotalCalls rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalCalls>
+    </owl:NamedIndividual>
+    
+
+                <!-- SERVICE 14 -->
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14">
+        <rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <hasQoS rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14_QoS"/>
+        <msm:hasOperation rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14_operation"/>
+        <hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Label14</hasLabel>
+    </owl:NamedIndividual>
+
+    
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14_operation -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14_operation">
+        <rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <hasAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://192.168.0.2:8080/~/MN-BBB/ETH_GW/Avatar3?op=Service14_operation</hasAddress>
+        <hasInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id=Avatar3&amp;op=Service14_op</hasInputMessage>
+        <hasMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUT</hasMethod>
+        <hasOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OutputOFService14</hasOutputMessage>
+    </owl:NamedIndividual>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14_QoS -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14_QoS">
+        <rdf:type rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#QoS"/>
+        <hasPerformance rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14_performance"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14_performance -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service14_performance">
+        <rdf:type rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+        <hasAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasAvailability>
+        <hasExecTime rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1</hasExecTime>
+        <hasTotalCalls rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalCalls>
+    </owl:NamedIndividual>
+    
+
+                <!-- SERVICE 15 -->
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15">
+        <rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <hasQoS rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15_QoS"/>
+        <msm:hasOperation rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15_operation"/>
+        <hasLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Label15</hasLabel>
+    </owl:NamedIndividual>
+
+    
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15_operation -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15_operation">
+        <rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <hasAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://192.168.0.2:8080/~/MN-BBB/ETH_GW/Avatar3?op=Service15_operation</hasAddress>
+        <hasInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id=Avatar3&amp;op=Service15_op</hasInputMessage>
+        <hasMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUT</hasMethod>
+        <hasOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OutputOFService15</hasOutputMessage>
+    </owl:NamedIndividual>
+    
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15_QoS -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15_QoS">
+        <rdf:type rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#QoS"/>
+        <hasPerformance rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15_performance"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15_performance -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Service15_performance">
+        <rdf:type rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+        <hasAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasAvailability>
+        <hasExecTime rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1</hasExecTime>
+        <hasTotalCalls rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalCalls>
+    </owl:NamedIndividual>
+    
+    
+
+<!--  ///////////////////////////////////////////////////////////////////////////////////////
+                    O T H E R S  
+         ///////////////////////////////////////////////////////////////////////////////////////-->
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Left_blinking_State -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Left_blinking_State">
+        <rdf:type rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuation"/>
+        <san:hasActuationInput rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Left_blinking_input"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Left_blinking_input -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Left_blinking_input">
+        <rdf:type rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuationInput"/>
+        <san:hasActuationValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OFF</san:hasActuationValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Parallel -->
+
+    <owl:Thing rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Parallel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Sequence -->
+
+    <owl:Thing rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Sequence">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#getState_Lef_blinking_Performance -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#getState_Lef_blinking_Performance">
+        <rdf:type rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#Performance"/>
+        <hasAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasAvailability>
+        <hasExecTime rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1</hasExecTime>
+        <hasTotalCalls rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalCalls>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#getState_Lef_blinking_QoS -->
+
+    <owl:NamedIndividual rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#getState_Lef_blinking_QoS">
+        <rdf:type rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#QoS"/>
+        <hasPerformance rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#getState_Lef_blinking_Performance"/>
+    </owl:NamedIndividual>
+    
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#g">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lane change</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#hasActuationValue"/>
+                        <swrl:argument1 rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#a"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ON</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuationInput"/>
+                                <swrl:argument1 rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#hasGoal"/>
+                                        <swrl:argument1 rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#v"/>
+                                        <swrl:argument2 rdf:resource="http://www.laas-cnrs.fr/recherches/SARA/ontologies/AvatarOnt#g"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
